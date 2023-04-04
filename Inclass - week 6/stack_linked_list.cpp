@@ -35,7 +35,6 @@ public:
         return (top == nullptr);
     }
     bool isFull() {
-        // Linked list implementation does not have a fixed size limit
         return false;
     }
     int stackTop() {
