@@ -30,6 +30,8 @@ void traverseInOrder(struct node *root) {
 
 }
 
+// Postorder traversal
+
 // Insert a node
 struct node *insertNode(struct node *node, int key) {
   if (node == NULL){
