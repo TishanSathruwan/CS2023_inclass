@@ -32,6 +32,34 @@ void traverseInOrder(struct node *root) {
 
 // Postorder traversal
 
+void traversePostorder(struct node *root) {
+  if ( root == NULL){
+    return;
+  }
+  else {
+    traversePostorder(root->left);
+    traversePostorder(root->right);
+    cout << root->key<<" ";
+  }
+
+}
+
+// preorder traversal
+
+void traversePreorder(struct node *root) {
+  if ( root == NULL){
+    return;
+  }
+  else {
+    cout << root->key<<" ";
+    traversePreorder(root->left);
+    traversePreorder(root->right);
+  }
+
+}
+
+
+
 // Insert a node
 struct node *insertNode(struct node *node, int key) {
   if (node == NULL){
