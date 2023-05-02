@@ -1,4 +1,7 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
   
@@ -51,8 +54,17 @@ void displayArray(int arr[], int n)
 // main program
 int main()
 {
+   srand(time(0));
+   int size_arr;
+   cout<<"Enter the size Of the array :";
+   cin >> size_arr;
+   
+   int heap_arr[size_arr];
 
-   int heap_arr[] = {5,67,23,12,43,51,1,3002,400,33};
+   for (int i = 0; i < size_arr; i++) {
+        heap_arr[i] = rand() % 3000 + 1; 
+    }
+
    int n = sizeof(heap_arr)/sizeof(heap_arr[0]);
    cout<<"Input array"<<endl;
    displayArray(heap_arr,n);
